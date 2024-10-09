@@ -1,16 +1,15 @@
-package com.ddaaniel.BuildNeo4j.domain;
+package com.ddaaniel.BuildNeo4j.domain.entity;
 
 public class Movie {
 
     private String title;
-    private String tagline;
+
     private int released;
 
     public Movie(){}
 
-    public Movie(String title, String tagline, int released) {
+    public Movie(String title, int released) {
         this.title = title;
-        this.tagline = tagline;
         this.released = released;
     }
 
@@ -22,13 +21,8 @@ public class Movie {
         this.title = title;
     }
 
-    public String getTagline() {
-        return tagline;
-    }
 
-    public void setTagline(String tagline) {
-        this.tagline = tagline;
-    }
+
 
     public int getReleased() {
         return released;
