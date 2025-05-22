@@ -15,9 +15,9 @@ public class Connection {
     public Connection(
             @Value("${neo4j.uri}") String uri,
             @Value("${neo4j.username}") String username,
-            @Value("${neo4j.uri}") String password
+            @Value("${neo4j.password}") String password
     ) {
-        this.driver = GraphDatabase.driver(uri, AuthTokens.basic(password, password));
+        this.driver = GraphDatabase.driver(uri, AuthTokens.basic(username, password));
     }
 
     public Session getSession(){

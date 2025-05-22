@@ -4,6 +4,9 @@ import com.ddaaniel.BuildNeo4j.domain.repository.neo4jRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class neo4jService {
 
@@ -17,5 +20,9 @@ public class neo4jService {
 
     public void addDirectorToMovie(String directorName, String movieTitle){
         neo4jRepository.addDirectorToMovie(directorName, movieTitle);
+    }
+
+    public List<Map<String, Object>> getActorsInMovies() {
+        return neo4jRepository.getActorsInMovies();
     }
 }
